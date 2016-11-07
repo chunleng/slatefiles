@@ -13,34 +13,35 @@ layout pBottomRight BEFORE corner bottom-right resize:screenSizeX/2;screenSizeY/
 layout pFull        BEFORE move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
 # Tiling
-bind k:ctrl;cmd chain layout pTop | layout pTopLeft | layout pTopRight
-bind j:ctrl;cmd chain layout pBottom | layout pBottomLeft | layout pBottomRight
-bind h:ctrl;cmd chain layout pLeft | layout pTopLeft | layout pBottomLeft
-bind l:ctrl;cmd chain layout pRight | layout pTopRight | layout pBottomRight
+bind k:shift,cmd chain layout pTop | layout pTopLeft | layout pTopRight
+bind j:shift,cmd chain layout pBottom | layout pBottomLeft | layout pBottomRight
+bind h:shift,cmd chain layout pLeft | layout pTopLeft | layout pBottomLeft
+bind l:shift,cmd chain layout pRight | layout pTopRight | layout pBottomRight
 bind k:cmd focus up
 bind j:cmd focus down
 bind h:cmd focus left
 bind l:cmd focus right
 # Fullscreen
-bind m:cmd chain layout pFull | shell path:~/.slate-scripts "~/.slate-scripts/call_applescript.sh minimize"
-bind m:ctrl,cmd chain layout pFull | shell path:~/.slate-scripts "~/.slate-scripts/call_applescript.sh minimize"
+bind m:cmd chain layout pFull | shell path:./scripts "call_applescript.sh minimize"
 
 # Throw to Another Screen
-bind up:ctrl;cmd throw up
-bind down:ctrl;cmd throw down
-bind left:ctrl;cmd throw left
-bind right:ctrl;cmd throw right
+bind up:shift,cmd throw up
+bind down:shift,cmd throw down
+bind left:shift,cmd throw left
+bind right:shift,cmd throw right
+bind k:ctrl,cmd throw up
+bind j:ctrl,cmd throw down
+bind h:ctrl,cmd throw left
+bind l:ctrl,cmd throw right
 
 
 # Restart slate
-bind r:ctrl;cmd relaunch
+bind r:shift,cmd relaunch
 source ~/.slate.local if_exists
 
 # Important App
-bind i:ctrl;cmd focus 'iTerm'
-bind o:ctrl;cmd focus 'Firefox'
+bind i:shift,cmd focus 'iTerm2'
+bind o:shift,cmd focus 'Firefox'
 
 # Mac Shortcut Binding
-bind padEnter:cmd shell path:~/.slate-scripts "~/.slate-scripts/call_applescript.sh full-screen"
-# bind m:cmd        shell path:~/.slate-scripts "~/.slate-scripts/call_applescript.sh minimize"
-# bind m:cmd,shift  shell path:~/.slate-scripts "~/.slate-scripts/call_applescript.sh minimize-restore"
+bind return:cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
