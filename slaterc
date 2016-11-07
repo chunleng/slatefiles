@@ -22,7 +22,8 @@ bind j:cmd focus down
 bind h:cmd focus left
 bind l:cmd focus right
 # Fullscreen
-bind m:cmd chain layout pFull | shell path:./scripts "call_applescript.sh minimize"
+bind m:cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh minimize"
+bind m:shift,cmd chain layout pFull
 
 # Throw to Another Screen
 bind up:shift,cmd throw up
@@ -45,3 +46,4 @@ bind o:shift,cmd focus 'Firefox'
 
 # Mac Shortcut Binding
 bind return:cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
+bind f:shift,cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
