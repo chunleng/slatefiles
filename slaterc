@@ -42,5 +42,5 @@ bind o:shift,cmd focus 'Firefox'
 
 # Mac Shortcut Binding
 # Fullscreen
-bind return:cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
+bind return:shift,cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
 bind f:shift,cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
