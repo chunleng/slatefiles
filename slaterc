@@ -26,10 +26,6 @@ bind m:cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh minimize"
 bind m:shift,cmd chain layout pFull
 
 # Throw to Another Screen
-bind up:shift,cmd throw up
-bind down:shift,cmd throw down
-bind left:shift,cmd throw left
-bind right:shift,cmd throw right
 bind k:ctrl,cmd throw up
 bind j:ctrl,cmd throw down
 bind h:ctrl,cmd throw left
