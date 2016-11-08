@@ -21,9 +21,9 @@ bind k:cmd focus up
 bind j:cmd focus down
 bind h:cmd focus left
 bind l:cmd focus right
-# Fullscreen
 bind m:cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh minimize"
-bind m:shift,cmd chain layout pFull
+bind m:shift,cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh unminimize"
+bind space:shift,cmd chain layout pFull
 
 # Throw to Another Screen
 bind k:ctrl,cmd throw up
@@ -41,5 +41,6 @@ bind i:shift,cmd focus 'iTerm2'
 bind o:shift,cmd focus 'Firefox'
 
 # Mac Shortcut Binding
+# Fullscreen
 bind return:cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
 bind f:shift,cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
