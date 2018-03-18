@@ -1,5 +1,6 @@
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
+config keyboardLayout dvorak
 
 # Layouts
 layout pLeft        BEFORE push left bar-resize:screenSizeX/2
