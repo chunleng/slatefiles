@@ -18,30 +18,22 @@ bind k:shift,cmd chain layout pTop | layout pTopLeft | layout pTopRight
 bind j:shift,cmd chain layout pBottom | layout pBottomLeft | layout pBottomRight
 bind h:shift,cmd chain layout pLeft | layout pTopLeft | layout pBottomLeft
 bind l:shift,cmd chain layout pRight | layout pTopRight | layout pBottomRight
-bind k:cmd focus up
-bind j:cmd focus down
-bind h:cmd focus left
-bind l:cmd focus right
 bind m:cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh minimize"
 bind m:shift,cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh unminimize"
-bind space:shift,cmd chain layout pFull
+bind space:shift,cmd layout pFull
 
 # Throw to Another Screen
-bind k:ctrl,cmd throw up
-bind j:ctrl,cmd throw down
-bind h:ctrl,cmd throw left
-bind l:ctrl,cmd throw right
+bind up:ctrl,cmd throw up
+bind down:ctrl,cmd throw down
+bind left:ctrl,cmd throw left
+bind right:ctrl,cmd throw right
 
 
 # Restart slate
 bind r:shift,cmd relaunch
-source ~/.slate.local if_exists
-
-# Important App
-bind i:shift,cmd focus 'iTerm2'
-bind o:shift,cmd focus 'Firefox'
 
 # Mac Shortcut Binding
 # Fullscreen
-bind return:shift,cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
 bind f:shift,cmd shell path:~/ "~/.slate-scripts/call_applescript.sh full-screen"
+
+source ~/.slate.local if_exists
