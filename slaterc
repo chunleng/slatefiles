@@ -14,8 +14,6 @@ layout pBottomRight BEFORE corner bottom-right resize:screenSizeX/2;screenSizeY/
 layout pFull        BEFORE move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
 # Tiling
-bind k:shift,cmd chain layout pTop | layout pTopLeft | layout pTopRight
-bind j:shift,cmd chain layout pBottom | layout pBottomLeft | layout pBottomRight
 bind h:shift,cmd chain layout pLeft | layout pTopLeft | layout pBottomLeft
 bind l:shift,cmd chain layout pRight | layout pTopRight | layout pBottomRight
 bind m:cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh minimize"
@@ -23,10 +21,10 @@ bind m:shift,cmd chain shell path:~/ "~/.slate-scripts/call_applescript.sh unmin
 bind space:shift,cmd layout pFull
 
 # Throw to Another Screen
-bind up:ctrl,cmd throw up
-bind down:ctrl,cmd throw down
-bind left:ctrl,cmd throw left
-bind right:ctrl,cmd throw right
+bind up:shift,ctrl throw up
+bind down:shift,ctrl throw down
+bind left:shift,ctrl throw left
+bind right:shift,ctrl throw right
 
 
 # Restart slate
